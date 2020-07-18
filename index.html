@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+
+        <script src="js/Chart.bundle.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    </head>
+
+    <body>
+        
+
+        
+        <div class="chartwrapper">
+      
+            <canvas id="myChart" width="900" height="900"></canvas>
+      
+        </div>
+
+        <script>
+
+            const myContext = document.getElementById("myChart");
+            
+            let myChartConfig = {
+                
+                type: 'doughnut',
+                data: {
+                    
+                    labels: ["Deutschland", "Österreich", "Belgien", "Niederland", "Kroatien", "Malta"],
+                    datasets: [
+                        {
+                            
+                            borderColor: 'black',
+                            backgroundColor: ['#3fa535', '#81b328', '#c4c620', '#d7da12', '#dcae0a', '#ea7605'],
+                            data: [25.68, 22.17, 20.64, 20.62, 8.17, 2.72]
+                            
+                        }]
+                    
+                },
+                
+                options: {
+              
+                    cutoutPercentage: 70,
+                    animation: {
+                         
+                        animateScale: true
+                        
+                    },
+                    
+                    title: {
+                        display: true,
+                        text: 'EU-Recyclingziel im Jahr 2016',
+                        fontColor: 'white',
+                        fontSize: 20
+                    },
+                    
+                    legend: {
+                        labels: {
+                            
+                            fontColor: 'white',
+                            fontSize: 14
+
+                        }
+                    }
+                    
+                }
+
+            }
+            
+            var myChart = new Chart (myContext, myChartConfig);
+            
+        </script>
+
+    </body>
+
+</html>

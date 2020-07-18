@@ -1,0 +1,19 @@
+body {
+
+color: white;
+background-color:black;
+
+display: grid;
+justify-content: center;
+
+
+}
+
+
+.chartwrapper {
+    
+    padding-top: 25% ;
+    height: 500px;
+    width: 500px;
+    
+}
